@@ -33,6 +33,7 @@ class TweeetsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+
   test "should update tweeet" do
     patch tweeet_url(@tweeet), params: { tweeet: { tweeet: @tweeet.tweeet } }
     assert_redirected_to tweeet_url(@tweeet)

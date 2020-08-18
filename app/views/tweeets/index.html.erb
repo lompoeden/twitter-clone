@@ -1,25 +1,15 @@
-<section class="section">
-  <div class="container">
-    <div class="columns">
-<%= render "feed" %>
-
-</div>
-</div>
-</section>
-</tbody>
-</table>
-
-    <% @tweeet.each do |tweeet| %>
-      <tr>
-        <td><%= tweeet.tweeet %></td>
-        <td><%= link_to 'Show', tweeet %></td>
-        <td><%= link_to 'Edit', edit_tweeet_path(tweeet) %></td>
-        <td><%= link_to 'Destroy', tweeet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<h1>Tweets</h1>
+<%= link_to 'New Tweet', new_tweeet_path %>
+    <% @tweeets.each do |tweeet| %>
+      <hr>
+        <div>
+          <%= tweeet.tweeet %>
+        </div>
+        <div>
+          <%= link_to 'Show', tweeet %>
+          <%= link_to 'Edit', edit_tweeet_path(tweeet) %>
+          <%= link_to 'Destroy', tweeet, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
     <% end %>
-  </tbody>
-</table>
-
 <br>
-
 <%= link_to 'New Tweeet', new_tweeet_path %>

@@ -28,7 +28,7 @@ class TweeetsController < ApplicationController
 
     respond_to do |format|
       if @tweeet.save
-        format.html { redirect_to @tweeet, notice: 'Tweeet was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Tweeet was successfully created.' }
         format.json { render :show, status: :created, location: @tweeet }
       else
         format.html { render :new }
@@ -62,12 +62,10 @@ class TweeetsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_tweeet
       @tweeet = Tweeet.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def tweeet_params
       params.require(:tweeet).permit(:tweeet)
     end
