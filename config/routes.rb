@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  # 追記する
-  resources :blogs
+  resources :tweeets
+
+root "tweeets#index"  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

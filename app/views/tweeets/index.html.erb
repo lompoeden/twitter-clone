@@ -6,6 +6,7 @@
           <%= tweeet.tweeet %>
         </div>
         <div>
+          <%= link_to 'Post', tweeet %>
           <%= link_to 'Show', tweeet %>
           <%= link_to 'Edit', edit_tweeet_path(tweeet) %>
           <%= link_to 'Destroy', tweeet, method: :delete, data: { confirm: 'Are you sure?' } %>
