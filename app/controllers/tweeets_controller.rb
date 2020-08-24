@@ -1,30 +1,27 @@
 class TweeetsController < ApplicationController
   before_action :set_tweeet, only: [:show, :edit, :post, :update, :destroy]
 
-  # GET /tweeets
-  # GET /tweeets.json
+
   def index
     @tweeets = Tweeet.all.order("created_at DESC")
   end
 
-  # GET /tweeets/1
-  # GET /tweeets/1.json
+
   def show
   end
 
-  # GET /tweeets/new
+
   def new
     @tweeet = Tweeet.new
   end
 
-  # GET /tweeets/1/edit
+
   def edit
   end
 
 def Post
 end
-  # POST /tweeets
-  # POST /tweeets.json
+
   def create
     @tweeet = Tweeet.new(tweeet_params)
 
@@ -39,8 +36,7 @@ end
     end
   end
 
-  # PATCH/PUT /tweeets/1
-  # PATCH/PUT /tweeets/1.json
+
   def update
     respond_to do |format|
       if @tweeet.update(tweeet_params)
@@ -53,8 +49,6 @@ end
     end
   end
 
-  # DELETE /tweeets/1
-  # DELETE /tweeets/1.json
   def destroy
     @tweeet.destroy
     respond_to do |format|

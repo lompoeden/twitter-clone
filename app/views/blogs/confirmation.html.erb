@@ -1,0 +1,8 @@
+<h3>send the following content。</h3>
+<%= form_with(model: @blog, local: true) do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  <p>article:<%= @blog.title %></p>
+  <p>title:<%= @blog.content %></p>
+  <%= form.submit  "sign up" %>
+<% end %>
